@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dkvpxvq585aji"]
+
+[ext_resource type="Texture2D" uid="uid://sbngdiehboho" path="res://Art Assets/Art Assets/Characters/Duck/Duck (16x16).png" id="1_m03l2"]
+[ext_resource type="Script" path="res://Scripts/playe.gd" id="1_ne70r"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jq88y"]
+size = Vector2(16, 16)
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_ne70r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jq88y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_m03l2")
+hframes = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
